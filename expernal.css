@@ -4,30 +4,57 @@
      box-sizing: border-box;
      font-family: Arial, Helvetica, sans-serif;
  }
- :root{
-    --main:linear-gradient(90deg,#0217fa,#9e02f9,#fb0372);
-    --bg:black; 
-    --text:white;
-    --nav:black;
-    --btn:linear-gradient(45deg,#fb0372,#9e02f9,#0217fa);
-    --hover:linear-gradient(45deg,#0217fa,#9e02f9,#fb0372);
-    --shadow:#fb0372;
-    --border:#fb0327;
+
+ :root {
+     --angle: 0deg;
+     --color1: #ff0080;
+     --color2: #ff8c00;
+     --color3: #40e0d0;
+     --color4: #ff0080;
+     --main: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+     --bg: black;
+     --text: white;
+     --nav: black;
+     --btn: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+     --hover: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+     --shadow: #40e0d0;
+     --border: #ff8c00;
  }
- .text-gradient{
-    background:var(--main);
-   -webkit-background-clip: text;
-   background-clip: text;
-    color: transparent;
+
+ /* MOVE THEM HERE */
+ @property --angle {
+     syntax: "<angle>";
+     inherits: false;
+     initial-value: 0deg;
+ }
+
+ @keyframes Move {
+     0% {
+         --angle: 0deg;
+     }
+
+     100% {
+         --angle: 360deg;
+     }
+ }
+
+ .text-gradient {
+     background: var(--main);
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
  }
 
  body,
  html {
      scroll-behavior: smooth;
-     background:var(--bg);
      overflow-x: hidden;
-     color: white;
 
+ }
+
+ body {
+     background: var(--bg);
+     color: white;
  }
 
  /* smallScrollIcon */
@@ -38,7 +65,7 @@
      width: 30px;
      height: 30px;
      color: white;
-     background:var(--btn);
+     background: var(--btn);
      border-radius: 50%;
      display: flex;
      justify-content: center;
@@ -115,26 +142,14 @@
  #section1 #image-container #image {
      width: 25rem;
      height: 25rem;
-     padding:5px;
+     padding: 5px;
      border-radius: 50%;
      overflow: hidden;
-    background: var(--main); 
-    background-size: 300% 300%;  
+     background: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color4));
      filter: contrast(1.3);
-     animation:Move 5s linear infinite;
+     box-shadow: 2px 2px 5px #40e0d0, -2px -2px 5px #ff8c00;
+     animation: Move 5s linear infinite;
  }
- @keyframes Move {
-  0%{
-    background-position: 0% 50%;
-  }
-  50%{
-    background-position: 100% 50%;
-  }
-  100%{
-    background-position: 0% 50%;
-  }    
-}
-
 
  #section1 #image-container #image img {
      width: 100%;
@@ -160,14 +175,15 @@
      height: 40px;
      border: none;
      outline: none;
-     background:var(--btn);
+     background: var(--btn);
      color: white;
      padding: 10px 20px;
      border-radius: 6px;
      cursor: pointer;
  }
+
  #section1 #text-contents #text button:hover {
-     background:var(--hover);
+     background: var(--hover);
  }
 
 
@@ -182,8 +198,8 @@
 
  .title div {
      width: 200px;
-     height:5px;
-     background:var(--btn);
+     height: 5px;
+     background: var(--btn);
      border-radius: 25px;
 
  }
@@ -206,8 +222,10 @@
      padding: 1rem;
      flex-direction: column;
      word-break: break-all;
- } #section2 #about-me .text{
-    text-indent:5px;
+ }
+
+ #section2 #about-me .text {
+     text-indent: 5px;
  }
 
  #section2 #about-me .text button {
@@ -215,7 +233,7 @@
      height: 40px;
      border: none;
      outline: none;
-     background:var(--btn);
+     background: var(--btn);
      color: white;
      padding: 10px 20px;
      border-radius: 6px;
@@ -223,7 +241,7 @@
  }
 
  #section2 #about-me .text button:hover {
-     background:var(--hover);
+     background: var(--hover);
  }
 
  #section2 #img-container {
@@ -238,7 +256,7 @@
  #section2 #img-container #photo {
      width: 24rem;
      height: 24rem;
-     box-shadow: 0px 0px 5px 1px #8d5e4c;
+     box-shadow: 0px 0px 5px 1px #fb0327;
      filter: contrast(1.3);
  }
 
@@ -288,10 +306,10 @@
      position: absolute;
      top: 0;
      left: 0;
-     background:var(--main);
+     background: var(--main);
      border-radius: 25px;
      line-height: 23px;
-     color:var(--text);
+     color: var(--text);
      text-align: center;
  }
 
@@ -319,33 +337,34 @@
      display: flex;
      justify-content: space-evenly;
      align-items: center;
+     background: black;
      border-radius: 25px;
      width: 90%;
      padding: 1rem;
-     height:250px;
-     z-index: 1;   
+     height: 250px;
      position: relative;
-
  }
- #section4 .education .education-container::before {
-  content: "";
-  position: absolute;
-  border-radius:25px;
-  inset:-3px;  
-  background:var(--main);        
-  background-size: 300% 300%; 
-  animation:Move 4s linear infinite;
-  z-index: -1;
-}
 
-#section4 .education .education-container::after {
-  content: "";
-  position: absolute;
-  inset:0px;        
-  background: #111; 
-  border-radius: 25px;
-  z-index: -1;
-}
+ #section4 .education .education-container::before {
+     content: "";
+     position: absolute;
+     inset: -3px;
+     z-index: -1;
+     border-radius: inherit;
+     background:
+         conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color4));
+     ;
+     animation: Move 4s linear infinite;
+ }
+
+ /* #section4 .education .education-container::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background: black;
+     border-radius: inherit;
+     z-index: -1;
+ } */
 
  #section4 .education .education-container .image img {
      width: 100px;
@@ -386,31 +405,30 @@
      align-items: center;
      text-align: center;
      gap: 0.25rem;
+     background: black;
      border-radius: 25px;
-     box-shadow: 0px 0px 5px 2px var(--shadow);
-     backdrop-filter: blur(15px);
      position: relative;
-     z-index: 1;
  }
-#section5 .projects-container .projects::before {
-  content: "";
-  position: absolute;
-  border-radius:20px;
-  inset:-3px;          
-   background:var(--main);
-  background-size: 300% 300%;
-  animation:Move 4s linear infinite;
-  z-index: -1;
-}
 
-#section5 .projects-container .projects::after {
-  content: "";
-  position: absolute;
-  inset:0px;        
-  background: #111; 
-  border-radius: 16px;
-  z-index: -1;
-}
+ #section5 .projects-container .projects::before {
+     content: "";
+     position: absolute;
+     inset: -3px;
+     z-index: -1;
+     border-radius: inherit;
+     background: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color4));
+     ;
+     animation: Move 4s linear infinite;
+ }
+
+ /* #section5 .projects-container .projects::after {
+     content: "";
+     position: absolute;
+     inset: 0px;
+     background: #111;
+     border-radius: inherit;
+     z-index: -1;
+ } */
 
  #section5 .projects-container .projects img {
      width: 100%;
@@ -442,28 +460,20 @@
      height: auto;
      padding: 2rem;
      border-radius: 20px;
-     z-index: 1;
      position: relative;
+     background: black;
  }
- #section6 #contact-me form::before {
-  content: "";
-  position: absolute;
-  border-radius:25px;
-  inset:-3px;  
-  background:var(--main);        
-  background-size: 300% 300%; 
-  animation:Move 4s linear infinite;
-  z-index: -1;
-}
 
-#section6 #contact-me form::after {
-  content: "";
-  position: absolute;
-  inset:0px;        
-  background: #111; 
-  border-radius: 25px;
-  z-index: -1;
-}
+ #section6 #contact-me form::before {
+     content: "";
+     position: absolute;
+     inset: -3px;
+     z-index: -1;
+     border-radius: inherit;
+     background: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color4));
+     ;
+     animation: Move 4s linear infinite;
+ }
 
  #section6 #contact-me form label {
      font-size: 1.25rem;
@@ -477,7 +487,7 @@
      outline: none;
      padding: 0.5rem 1rem;
      border-radius: 10px;
-    border: 1px solid var(--border);
+     border: 1px solid var(--border);
  }
 
  #section6 #contact-me form textarea {
@@ -487,7 +497,7 @@
      outline: none;
      border-radius: 10px;
      padding: 1rem;
-    border: 1px solid var(--border);
+     border: 1px solid var(--border);
  }
 
  #section6 #contact-me form button {
@@ -495,7 +505,7 @@
      height: 40px;
      outline: none;
      border: none;
-     background:var(--btn);
+     background: var(--btn);
      color: white;
      letter-spacing: 2px;
      border-radius: 10px;
@@ -504,7 +514,7 @@
  }
 
  #section6 #contact-me form button:hover {
-     background:var(--hover);
+     background: var(--hover);
  }
 
  /* footer */
@@ -518,7 +528,7 @@
      padding: 1rem 2rem;
      color: white;
      box-shadow: 0px 0px 5px var(--shadow);
-     background:var(--bg);
+     background: var(--bg);
  }
 
  #footer #socialmediaicons {
@@ -534,8 +544,8 @@
  }
 
  #footer #socialmediaicons i {
-     width:35px;
-     height:35px;
+     width: 35px;
+     height: 35px;
      border-radius: 50%;
      border: 1px solid var(--border);
      display: flex;
@@ -546,7 +556,7 @@
  }
 
  #footer #socialmediaicons i:hover {
-     background:var(--btn);
+     background: var(--btn);
      box-shadow: 0px 0px 5px 5px #001f12;
      ;
  }
@@ -563,7 +573,10 @@
          height: auto;
          padding: 6.25rem 0rem;
      }
-     #section1{padding:8rem 0rem;}
+
+     #section1 {
+         padding: 8rem 0rem;
+     }
 
  }
 
@@ -583,7 +596,7 @@
          padding-top: 5rem;
          padding-left: 3rem;
          width: 220px;
-         background:var(--bg);
+         background: var(--bg);
          color: white;
          z-index: 1000;
          gap: 2rem;
@@ -600,10 +613,11 @@
          flex-direction: column;
          height: auto;
          padding: 3rem 1rem;
-         gap: 0.5rem;       
+         gap: 0.5rem;
      }
-     #section1{
-           padding-top: 6rem !important;
+
+     #section1 {
+         padding-top: 6rem !important;
      }
 
      #section1 #image-container {
@@ -624,15 +638,11 @@
          width: 100%;
      }
 
-     /* #section4 .education .education-container .image {
-         display: none;
-     } */
-
      #section4 .education .education-container {
          flex-direction: column;
-         height:auto;
+         height: auto;
          align-items: center;
-         width:80%;
+         width: 90%;
          justify-content: center;
      }
 
@@ -643,6 +653,5 @@
      #footer {
          font-size: 14px;
      }
-
 
  }
