@@ -17,14 +17,16 @@ const menuToggle = document.querySelector("#menuToggle")
 let isOpen = false;
 menuToggle.addEventListener("click", (e) => {
     e.stopPropagation()
-    if (window.innerWidth <= 768) {
+ if (window.innerWidth <= 768) {
         if (!isOpen) {
             navBar.classList.add("active");
-            menuToggle.textContent = "❌";
+            menuToggle.innerHTML = `<i class="fa-solid fa-x"></i>`;
+            menuToggle.style.color = "red"
             isOpen = true;
         } else {
             navBar.classList.remove("active");
-            menuToggle.textContent = "☰";
+            menuToggle.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+            menuToggle.style.color = "white"
             isOpen = false;
         }
     }
@@ -71,5 +73,6 @@ progressBar(".bootstrap", 80)
 progressBar(".mangodb", 75)
 progressBar(".expressjs", 70)
 progressBar(".reactjs", 90)
+
 
 
