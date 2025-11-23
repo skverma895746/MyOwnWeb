@@ -97,20 +97,35 @@
      z-index: 1000;
  }
 
- #navbar #links {
-     display: flex;
-     align-items: center;
-     gap: 20px;
+ #navbar #links a::before
+ {
+    content: "";
+    position: absolute;
+    width:0px;
+    height:0px;
+    top:-3px;
+    left:-3px;
+    z-index: -1;
+    background: var(--main);
+    transition:width 0.3s,height 0.3s;     
  }
-
- #navbar #links a {
-     color: white;
-     text-decoration: none;
+ #navbar #links a::after
+ {
+    content: "";
+    position: absolute;
+    width:0px;
+    height:0px;
+    right:-3px;
+    bottom:-3px;
+    z-index: -1;
+    background: var(--main);
+    transition:width 0.3s,height 0.3s;
+      
  }
-
- #navbar #links a:hover {
-     text-decoration: underline;
-     text-underline-offset: 8px;
+ #navbar #links a:hover::before,
+  #navbar #links a:hover::after{
+     width:20px; 
+     height:20px;  
  }
 
  #navbar .menu-toggle {
@@ -627,3 +642,4 @@
      }
 
  }
+
