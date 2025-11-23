@@ -12,7 +12,7 @@
      --color3: #40e0d0;
      --color4: #ff0080;
      --main: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
-     --bg: black;
+     --bg:#121212;
      --text: white;
      --nav: black;
      --btn: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
@@ -656,5 +656,6 @@
      }
 
  }
+
 
 
