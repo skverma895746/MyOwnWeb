@@ -458,7 +458,7 @@
  }
 
  #section6 #contact-me {
-     width: 80%;
+     width:80%;
      height: 100%;
      display: flex;
      justify-content: center;
@@ -468,13 +468,21 @@
  }
 
  #section6 #contact-me .borderColor {
-     padding: 0.25rem;
+    width:100%;
+    height:80%;
+    padding: 0.25rem;
      border-radius: 20px;
      background: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color4));
      animation: Move 4s linear infinite;
  }
+ #section6 #contact-me .borderColor iframe{
+    width:100%;
+    background: var(--bg);
+    border-radius: inherit;
+    height:100%;
+ }
 
- #section6 #contact-me .borderColor form {
+ /* #section6 #contact-me .borderColor form {
      width: 100%;
      height: auto;
      padding: 2rem;
@@ -524,7 +532,7 @@
 
  #section6 #contact-me .borderColor form button:hover {
      background: var(--hover);
- }
+ } */
 
  /* footer */
  #footer {
@@ -660,6 +668,7 @@
 
      #section6 #contact-me {
          width: 90%;
+         height:400rem;
      }
 
      #footer {
