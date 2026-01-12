@@ -4,7 +4,6 @@
      box-sizing: border-box;
      font-family: Arial, Helvetica, sans-serif;
  }
-
  :root {
      --angle: 0deg;
      --color1: #ff0080;
@@ -561,9 +560,9 @@
  }
 
  #footer #socialmediaicons i {
-     width: 35px;
-     height: 35px;
-     border-radius: 50%;
+     width:40px;
+     height:40px;
+     border-radius:80px;
      border: 1px solid var(--border);
      display: flex;
      justify-content: center;
@@ -673,12 +672,8 @@
          width: 90%;
          height:500px;
      }
-
-     #footer {
-         font-size: 14px;
-     }
-
  }
+
 
 
 
