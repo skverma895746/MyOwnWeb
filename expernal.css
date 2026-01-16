@@ -56,8 +56,7 @@
 
  /* smallScrollIcon */
  #smallScrollIcon {
-     position: sticky;
-     top: 0;
+     position:fixed;
      bottom: 1rem;
      right: 1rem;
      width: 30px;
@@ -672,3 +671,4 @@
          font-size: 14px;
      }
  }
+
