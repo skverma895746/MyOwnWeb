@@ -113,6 +113,9 @@
      position: relative;
      padding: 5px;
  }
+ #navbar #links #link a.active {
+     color:#ff8c00;
+ }
 
  #navbar #links #link a::before {
      content: "";
@@ -601,27 +604,28 @@
      #navbar .menu-toggle {
          display: flex;
      }
-
-     #navbar #links {
+    #navbar #links {
          position: absolute;
          top: 100%;
-         right: 0;
-          padding:40px;
-         width: 220px;
-         transform: translateX(100%);
+         right: -100%;
+         padding: 40px;
+         width: 60%;
          background: var(--bg);
          color: white;
          z-index: 1000;
          font-size: 1.22rem;
-         transition: transform 0.5s ease;
+         transition: right 0.5s ease;
          overflow: hidden;
      }
-
      #navbar #links #link {
-        width:100%;
+         width: 100%;
          flex-direction: column;
          align-items: flex-start;
      }
+     #navbar #links.open {
+         right: 0;
+     }
+
 
      #section1,
      #section2,
@@ -669,5 +673,6 @@
          font-size: 14px;
      }
  }
+
 
 
