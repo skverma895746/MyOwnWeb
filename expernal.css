@@ -82,7 +82,7 @@
  #navbar {
      display: flex;
      align-items: center;
-     padding: 0.25rem 2rem;
+     padding: 8px 20px;
      justify-content: space-between;
      color: var(--text);
      height: 60px;
@@ -674,6 +674,7 @@
          font-size: 14px;
      }
  }
+
 
 
 
