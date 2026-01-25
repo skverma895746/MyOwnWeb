@@ -151,6 +151,7 @@
      font-size: 1.5rem;
      display: none;
      height: 40px;
+      line-height:40px;
      width: 40px;
      padding: 5px;
      border: 1px solid gray;
@@ -639,7 +640,7 @@
          gap: 0.5rem;
      }
      #section1{
-        padding-top:6rem;
+        padding-top:5rem;
      }
      #section1 #image-container {
          width: 100%;
@@ -673,6 +674,7 @@
          font-size: 14px;
      }
  }
+
 
 
 
