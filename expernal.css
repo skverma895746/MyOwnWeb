@@ -162,7 +162,7 @@
  }
 
  #navbar #links.active {
-     transform: translateX(0%);
+      right:0;
  }
 
  /* section1 */
@@ -262,8 +262,9 @@
      word-break: break-all;
  }
 
- #section2 #about-me .text {
-     text-indent: 5px;
+ #section2 #about-me .text::first-letter {
+     font-size:20px;
+     font-weight: bolder;
  }
 
  #section2 #about-me .text button {
@@ -672,6 +673,7 @@
          font-size: 14px;
      }
  }
+
 
 
 
