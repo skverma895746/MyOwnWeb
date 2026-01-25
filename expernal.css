@@ -586,10 +586,10 @@
      #section5,
      #section6 {
          height: auto;
-         padding: 3rem 0rem;
+         padding: 3rem 0.5rem;
      }
         #section1{
-        padding-top:6rem;
+        padding-top:5rem;
      }
 
      #section6 #contact-me {
@@ -636,11 +636,11 @@
      #section6 {
          flex-direction: column;
          height: auto;
-         padding: 3rem 1rem;
+         padding: 3rem 0.5rem;
          gap: 0.5rem;
      }
      #section1{
-        padding-top:5rem;
+        padding-top:4.5rem;
      }
      #section1 #image-container {
          width: 100%;
@@ -674,6 +674,7 @@
          font-size: 14px;
      }
  }
+
 
 
 
