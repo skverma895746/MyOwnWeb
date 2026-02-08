@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menuToggle.addEventListener("click", () => {
             navBar.classList.toggle("open")
             if (navBar.classList.contains("open")) {
-                menuToggle.textContent = "✖";
+                menuToggle.textContent = "❌";
             } else {
                 menuToggle.innerHTML = "☰";
             }
@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
         
+
 
 
 
