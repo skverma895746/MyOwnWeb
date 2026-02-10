@@ -609,7 +609,7 @@
          color: white;
          z-index: 1000;
          font-size: 1.22rem;
-         transition: right 0.5s ease;
+         transition: right 0.1s ease;
          overflow: hidden;
      }
      #navbar #links #link {
@@ -665,6 +665,7 @@
          font-size: 14px;
      }
  }
+
 
 
 
