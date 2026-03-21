@@ -593,9 +593,6 @@
  /* tablet  */
  /* mobile responsive design*/
  @media screen and (max-width:768px) {
-     :root {
-         --bg: #071243;
-     }
      #navbar .menu-toggle {
          display: flex;
      }
