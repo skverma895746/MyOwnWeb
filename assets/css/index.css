@@ -670,6 +670,9 @@
          width: 100%;
          justify-content: center;
      }
+ #section5 .projects-container .borderColor .projects{
+      width:300px;
+ }
 
      #section6 #contact-me {
          width: 95%;
