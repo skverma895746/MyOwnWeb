@@ -602,7 +602,7 @@
  @media screen and (max-width:768px) {
      #navbar {
          justify-content: space-between;
-         padding: 0px 20px;
+         padding: 0px 10px;
      }
 
      #navbar .menu-toggle {
@@ -673,10 +673,6 @@
 
      #section6 #contact-me {
          width: 95%;
-         height: 400px;
-     }
-
-     #footer {
-    
+         height:500px;
      }
  }
