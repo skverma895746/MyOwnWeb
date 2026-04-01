@@ -326,13 +326,13 @@
      align-items: center;
      justify-content: center;
      flex-direction: column;
-     gap:20px;
+     gap:15px;
  }
 
  #section4 .education .borderColor {
      padding:2px;
      width: 90%;
-     border-radius:20px;
+     border-radius:10px;
      background: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color4));
      animation: Move 4s linear infinite;
      transition: transform 1s;
