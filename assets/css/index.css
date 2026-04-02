@@ -48,7 +48,6 @@
  body,
  html {
      scroll-behavior: smooth;
-     overflow-x: hidden;
      scroll-snap-type:y mandatory;
  }
  section{
@@ -56,7 +55,7 @@
  }
 
  body {
-     background: var(--bg);
+     background:rgba(0,0,0,0.95);
      color: var(--text);
  }
 
@@ -94,7 +93,7 @@
      gap: 50px;
      color: var(--text);
      height: 50px;
-     background: var(--bg);
+     background:var(--bg);
      box-shadow: 0px 0px 5px var(--shadow);
      width: 100%;
      z-index: 1000;
@@ -115,8 +114,8 @@
 
  #navbar #links #link a {
      color: var(--text);
-     text-decoration: none;
      background: var(--bg);
+     text-decoration: none;
      position: relative;
      padding: 5px;
  }
@@ -213,13 +212,14 @@
  }
 
  #section1 #text-contents #text button {
-     width: 150px;
+     width:200px;
      height: 40px;
      border: none;
      outline: none;
+     font-size:17px;
      background: var(--btn);
      color: var(--text);
-     padding: 10px 20px;
+     padding: 10px;
      border-radius:25px;
      cursor: pointer;
  }
@@ -273,13 +273,14 @@
  }
 
  #section2 #about-me .text button {
-     width: 150px;
+     width: 180px;
      height: 40px;
      border: none;
      outline: none;
+     font-size:17px;
      background: var(--btn);
      color: var(--text);
-     padding: 10px 20px;
+     padding: 10px;
      border-radius:25px;
      cursor: pointer;
  }
@@ -351,7 +352,6 @@
      width: 100%;
      padding:10px;
      height:180px;
-     position: relative;
  }
 
  #section4 .education .borderColor .education-container .image img {
@@ -424,16 +424,16 @@
 
  #section5 .projects-container {
      width: 90%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 1rem;
-     flex-wrap: wrap;
+     display:grid;
+     place-content: center;
+     grid-template-columns: repeat(4,250px);
+     gap:10px;
 
  }
 
  #section5 .projects-container .borderColor {
      padding:2px;
+     height:300px;
      border-radius:10px;
      background: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color4));
      animation: Move 4s linear infinite;
@@ -441,13 +441,12 @@
  }
 
  #section5 .projects-container .borderColor .projects {
-     width: 250px;
-     height: 300px;
+     width:100%;
+     height:100%;
      padding:5px;
      display: flex;
      flex-direction: column;
      align-items: center;
-     text-align: justify;
      gap: 0.25rem;
      background: var(--bg);
      border-radius:inherit;
@@ -482,7 +481,7 @@
 
  #section6 #contact-me .borderColor {
      width: 100%;
-     height: 100%;
+     height:500px;
      padding:2px;
      border-radius:10px;
      background: conic-gradient(from var(--angle), var(--color1), var(--color2), var(--color3), var(--color4));
@@ -613,6 +612,9 @@
      #section4 .education .borderColor .education-container{
         height:200px;
      }
+      #section5 .projects-container{
+        grid-template-columns: repeat(3,250px);
+      }
  }
 
  /* tablet  */
@@ -630,14 +632,15 @@
      #navbar #links {
          position: absolute;
          top: 100%;
-         right: -100%;
-         padding: 40px;
-         width: 60%;
+         right:0;
+         width: 100%;
+         transform:scaleY(0);
+         transform-origin: top;
          background: var(--bg);
+         padding:40px;
          color: white;
          z-index: 1000;
          font-size: 1.22rem;
-         transition: right 0.5s ease;
          overflow: hidden;
      }
 
@@ -648,7 +651,7 @@
      }
 
      #navbar #links.open {
-         right: 0;
+        transform: scaleY(1);
      }
 
      #section1,
@@ -687,9 +690,14 @@
          width: 100%;
          justify-content: center;
      }
-     #section5 .projects-container .borderColor .projects{
+      #section5 .projects-container {
+     gap:10px;
+     grid-template-columns: repeat(1,1fr);
+
+ }
+     #section5 .projects-container .borderColor{
         width:100%;
-        height:270px;
+        height:250px;
      }
 
      #section6 #contact-me {
