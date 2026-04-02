@@ -51,7 +51,7 @@
      scroll-snap-type:y mandatory;
  }
  section{
-    scroll-snap-align:end;
+    scroll-snap-align:center;
  }
 
  body {
