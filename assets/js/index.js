@@ -36,10 +36,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
             if (navBar.classList.contains("open")) {
                 menuToggle.textContent = "✕";
-                menuToggle.setAttribute("aria-expanded", "true");
             } else {
                 menuToggle.textContent = "☰";
-                menuToggle.setAttribute("aria-expanded", "false");
+               
             }
         });
 
