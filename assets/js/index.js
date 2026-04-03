@@ -36,15 +36,16 @@ document.addEventListener("DOMContentLoaded",()=>{
 
             if (navBar.classList.contains("open")) {
                 menuToggle.textContent = "✕";
+                menuToggle.setAttribute("aria-expanded", "true");
             } else {
                 menuToggle.textContent = "☰";
-               
+                menuToggle.setAttribute("aria-expanded", "false");
             }
         });
 
     function progressBar(technology, percentage) {
         const fill = document.querySelector(technology);
-        if (!fill) return;
+        if (fill) {;
 
         let width = 0;
 
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             fill.textContent = width + "%";
         }, 50);
     }
+}
     progressBar(".html", 90);
     progressBar(".css", 90);
     progressBar(".js", 75);
