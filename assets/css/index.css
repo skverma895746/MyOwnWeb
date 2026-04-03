@@ -50,12 +50,7 @@
  body,
  html {
      scroll-behavior: smooth;
-     scroll-snap-type: y proximity;
  }
- section{
-    scroll-snap-align: start;
- }
-
  body{
      background:
         radial-gradient(circle at 50% 10%, rgba(236, 72, 153, 0.16) 0%, rgba(34, 211, 238, 0.12) 22%, rgba(5, 11, 20, 0) 46%),
