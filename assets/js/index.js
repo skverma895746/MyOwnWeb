@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded",()=>{
+
+
     const links = document.querySelectorAll("#navbar #links #link a");
     const titles = document.querySelectorAll(".title");
     const smallScrollIcon = document.querySelector("#smallScrollIcon");
     const navBar = document.querySelector("#links");
     const menuToggle = document.querySelector("#menuToggle");
-
+//  tracking navbar 
     window.addEventListener("scroll", () => {
         const pos = window.scrollY + window.innerHeight / 2;
 
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             smallScrollIcon.style.opacity = window.scrollY > 200 ? "1" : "0";
         }
     });
-
+//    moblie menubar 
     if (navBar && menuToggle) {
         menuToggle.addEventListener("click", () => {
             navBar.classList.toggle("open");
@@ -42,10 +44,11 @@ document.addEventListener("DOMContentLoaded",()=>{
                 menuToggle.setAttribute("aria-expanded", "false");
             }
         });
-
+    };
+    //   skills progress bar 
     function progressBar(technology, percentage) {
         const fill = document.querySelector(technology);
-        if (fill) {;
+        if (fill) {
 
         let width = 0;
 
@@ -66,8 +69,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     progressBar(".js", 75);
     progressBar(".nodejs", 60);
     progressBar(".bootstrap", 80);
-    progressBar(".mangodb", 75);
+    progressBar(".mongodb", 75);
     progressBar(".expressjs", 70);
-    progressBar(".reactjs", 90); 
+    progressBar(".reactjs", 90);
 
-    });
+// domContent end 
+ });
