@@ -175,7 +175,7 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     min-height: 100vh;
+     height: 100vh;
      padding: 4rem 0rem 1rem;
  }
 
@@ -273,7 +273,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     min-height: calc(100vh - 50px);
+     height: calc(100vh - 50px);
      padding: 2rem 0rem;
  }
 
@@ -318,7 +318,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     min-height: calc(100vh - 50px);
+     height: calc(100vh - 50px);
      padding: 2rem 0rem;
      gap: 1rem;
  }
@@ -373,7 +373,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     min-height: calc(100vh - 50px);
+     height: calc(100vh - 50px);
      padding: 2rem 0rem;
  }
 
@@ -421,7 +421,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     min-height: calc(100vh - 50px);
+     height: calc(100vh - 50px);
      padding: 2rem 0rem;
  }
 
@@ -469,7 +469,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     min-height: calc(100vh - 50px);
+     height: calc(100vh - 50px);
      padding: 2rem 0rem;
  }
 
